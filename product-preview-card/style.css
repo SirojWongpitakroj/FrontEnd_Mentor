@@ -1,0 +1,183 @@
+:root {
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-primary-500: hsl(158, 42%, 18%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
+
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --fm-accent: "Fraunces", serif;
+  --fm-body: "Montserrat", sans-serif; 
+}
+
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* general structure */
+/* 1. dislpay stuff */
+/* 2. position stuff */
+/* 3. box-model stuff */
+/* 4. typography */
+/* 5. manipulation */
+/* 6. others */
+
+body {
+    font-size: 0.875rem;
+    font-weight: var(--fw-regular);
+    font-family: var(--fm-body);
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-secondary-200);
+
+    display: grid;
+    place-content: center;
+}   
+
+.product {
+    --content-padding: 1.5rem;
+    
+    display: grid;
+    margin: 1rem;
+    background-color: var(--clr-neutral-100);
+
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 600px;
+} 
+
+@media (min-width: 600px) {
+    .product {
+        --content-padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product__content {
+    display: grid;
+    gap: 1rem;
+
+    padding: var(--content-padding);
+}
+
+.product__category {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product__title {
+    color: var(--clr-neutral-900);
+    font-size: 2rem;
+    font-family: var(--fm-accent);
+}
+
+.flex_group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product__price {
+    color: var(--clr-primary-400);
+    font-size: 2rem;
+    font-family: var(--fm-accent);
+    font-weight: var(--fw-bold);
+}
+
+
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.button[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url(./images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--clr-primary-500);
+}
+
+.button {
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.875em 1.5em;
+    background-color: var(--clr-primary-400);
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    border: none;
+    border-radius: 0.5rem;
+
+    font-size: 0.925rem;
+}
+
