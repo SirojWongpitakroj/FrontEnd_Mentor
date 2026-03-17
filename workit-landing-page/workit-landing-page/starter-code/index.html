@@ -5,45 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Workit landing page</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Workit landing page</title>
 </head>
 <body>
+  <header>
+    <nav class="header__nav">
+      <picture class="header__logo">
+        <img src="./assets/images/logo-light.svg" alt="workit logo image">
+      </picture>
 
-  Apply for access
+      <a class="btn">
+        Apply for access
+      </a>
+    </nav>
+  </header>
 
-  Data tailored to your needs.
+  <main>
+    <section class="hero">
+      <h1 class="hero__title">Data <span>tailored</span> to your needs.</h1>
 
-  Learn more
-  
-  1
+      <button class="btn">Learn more</button>
 
-  Actionable insights
-  
-  Optimize your products, improve customer satisfaction and stay ahead of the competition 
-  with our product data analytics.
+      <picture class="hero__image">
+        <img src="./assets/images/image-hero.webp" alt="Phone displaying chart graph going up">
+      </picture>
+    </section>
 
-  2
+    <section class="features">
+      <div class="feature">
+        <p class="feature__number">1</p>
+        <h2 class="feature__title">Actionable insights</h2>
+        <p class="feature__description">Optimize your products, improve customer satisfaction and stay ahead of the competition 
+  with our product data analytics.</p>
+      </div>
 
-  Data-driven decisions
+      <div class="feature">
+        <p class="feature__number">2</p>
+        <h2 class="feature__title">Data-driven decisions</h2>
+        <p class="feature__description">Make data-driven decisions with our product data analytics. Our AI-generated reports help 
+  you unlock insights hidden in your product data.</p>
+      </div>
 
-  Make data-driven decisions with our product data analytics. Our AI-generated reports help 
-  you unlock insights hidden in your product data.
+      <div class="feature">
+        <p class="feature__number">3</p>
+        <h2 class="feature__title">Always affordable</h2>
+        <p class="feature__description">Always affordable pricing that scales with your business. Get top-quality product data 
+  analytics services without hidden costs or unexpected fees.</p>
+      </div>
+    </section>
 
-  3
+    <section class="founder">
+      <picture class="founder__image">
+        <img src="./assets/images/image-founder.webp" alt="Founder portrait">
+      </picture>
 
-  Always affordable
-
-  Always affordable pricing that scales with your business. Get top-quality product data 
-  analytics services without hidden costs or unexpected fees.
-
-  Be the first to test
-
-  Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
+      <div class="founder__content">
+        <h2 class="founder__title">Be the first to test</h2>
+        <p class="founder__description">Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
   beta tester for our app and kickstart your company. Apply for access below and I’ll be 
-  in touch to schedule a call.
+  in touch to schedule a call.</p>
+        <button class="btn">Apply for access</button>
+      </div>
+    </section>
+  </main>
 
-  Apply for access
+  <footer>
+    <img class="logo-dark" src="./assets/images/logo-dark.svg" alt="workit logo">
+    <div>
+      <img src="./assets/images/icon-facebook.svg" alt="facebook logo">
+      <img src="./assets/images/icon-twitter.svg" alt="Twitter logo">
+      <img src="./assets/images/icon-instagram.svg" alt="instagram logo">
+    </div>
+  </footer>
 
 </body>
 </html>
